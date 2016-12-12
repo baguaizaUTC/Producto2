@@ -1,0 +1,41 @@
+@(computadoras: java.util.List[Pedidos]) 
+<html>
+<head>
+</head>
+<body>
+<table border="1">
+	<tr>
+			<td>Nombre bebida</td>
+			<td>precio bebida</td>
+			<td>cantidad</td>
+	</tr>
+	
+	@for(pedido <- pedido){
+	<tr>
+			<td>@Pedido.name</td>
+			<td>
+			 @if(pedido.cantidad == null) {
+                                <em>-</em>
+                            } else {
+                                @pedido.cantidad.format("")
+              </td>
+              
+              
+              
+        @if(pedido.precio == null) {
+                                <em>-</em>
+                            } else {
+                                @Pedido.precio.format("")
+              </td>
+                                  
+      <td>
+                            @if(pedido.pedido == null) {
+                                <em>-</em>
+                            } else {
+                                @pedido.pedido.name
+                            }
+      </td>
+      }
+</table>
+</body>
+</html>
