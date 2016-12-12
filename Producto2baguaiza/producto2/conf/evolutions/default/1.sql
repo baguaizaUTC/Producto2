@@ -6,7 +6,7 @@ create table pedi (
   id                        bigint not null,
   nombre                    varchar(255),
   descripcion               varchar(255),
-  precio		                varchar(255),
+  peso		                varchar(255),
   cantidad                  varchar(255),
   company_id                bigint,
   constraint pk_pedi primary key (id))

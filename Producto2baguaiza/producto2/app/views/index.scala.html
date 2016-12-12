@@ -5,35 +5,34 @@
 <body>
 <table border="1">
 	<tr>
-			<td>Nombre Nombre</td>
-			<td>descripcion  decripcion</td>
-			<td>precio Precio</td>
-			<td>cantidad  cantidad</td>
+			<td>Nombre bebida</td>
+			<td>precio bebida</td>
+			<td>cantidad</td>
 	</tr>
 	
 	@for(pedido <- pedido){
 	<tr>
-			<td>@pedio.name</td>
+			<td>@Pedido.name</td>
 			<td>
-			 @if(pedi.cantidad == null) {
+			 @if(pedido.cantidad == null) {
                                 <em>-</em>
                             } else {
-                                @pedi.cantidad.format("")
+                                @pedido.cantidad.format("")
               </td>
               
               
               
-        @if(pedi.precio == null) {
+        @if(pedido.precio == null) {
                                 <em>-</em>
                             } else {
-                                @pedi.precio.format("")
+                                @Pedido.precio.format("")
               </td>
                                   
       <td>
-                            @if(pedi.pedido == null) {
+                            @if(pedido.pedido == null) {
                                 <em>-</em>
                             } else {
-                                @pedi.pedi.name
+                                @pedido.pedido.name
                             }
       </td>
       }
